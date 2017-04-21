@@ -1,22 +1,28 @@
 const multiply = require('./multiplier.js')
 
 class ViewManager {
+
 	connectEventHandlers() {
-		// wire up event handler for form submit
+      document.getElementById('form-numbers')
+        .addEventListener(
+        	'submit',
+        	this.onSubmit.bind(this));
 	}
+
 	onSubmit(event) {
-
+		event.preventDefault();
 		//block form from submitting
-
-		// grab number values as strings
-		
-		//cast the strings to ints
-		
+		var multiplicands = document.getElementsByClassName('input-num');
+		var hTMLValues = Array.prototype.slice.call(multiplicands);
+		var values = hTMLValues.map(function (value) {
+			return parseInt(value.value, 10);
+		})
 		//add ints to an array
 		
 		//reduce the array by multiplying values
-
+        const sum = multiply(values);
 		//output
+		alert(sum);
 	}
 
 }
