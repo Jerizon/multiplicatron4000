@@ -37,7 +37,7 @@ class ViewManager {
 function addInput() {
     var input = document.createElement("div");
     input.innerHTML = '<input class="input-num" type="text" autocomplete="off"/>';
-    document.querySelector('.product').before(input);
+    document.querySelector('.divider').before(input);
 }
 
 const viewManager = new ViewManager();
