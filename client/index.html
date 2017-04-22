@@ -2,23 +2,26 @@
 <html>
 
 <head>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <form id="form-numbers">
         <div>
-            <label>Number 1</label>
             <input class="input-num" type="text" autocomplete="off" />
         </div>
         <div>
-            <label>Number 2</label>
             <input class="input-num" type="text" autocomplete="off" />
         </div>
-        <div id="calculator">
-            <input type="submit" value="Calculate!" />
+        <div class="divider">
+            <hr/>
         </div>
+        <div class="product">?</div>
+        <div id="calculator">
+            <button>Calculate!</button>
+        </div>
+        <button id="addFactor" type="button">Add Factor</button>
     </form>
-    <button id="addFactor" type="button" >Add Factor</button>
     <script src="bundle.js"></script>
 </body>
 
