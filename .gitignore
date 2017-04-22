@@ -2,3 +2,4 @@
 client/bundle.js
 *.swp
 *.swo
+node_modules
