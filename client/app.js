@@ -19,6 +19,7 @@ class ViewManager {
 		var values = hTMLValues.map(function (value) {
 			return parseInt(value.value, 10);
 		})
+		values = values.filter( function(value) {return !isNaN(value)});
 				
 		const sum = multiply(values);
 		alert(sum);
@@ -27,7 +28,7 @@ class ViewManager {
 }
 function addInput() {
 		var input = document.createElement("div");
-		input.innerHTML ='<input class="input-num" type="text" autocomplete="off" />';
+		input.innerHTML ='<input class="input-num" type="text" autocomplete="off" value="1" />';
 		document.getElementById('calculator').before(input);
 	}
 
